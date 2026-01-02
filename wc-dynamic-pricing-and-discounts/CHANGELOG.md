@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.5.6 — 2026-01-02
+- Fix — Prevent PHP 8 TypeError when subtracting prices if base/adjusted amounts arrive as strings (e.g., variable products with all variations out of stock). Enforced float casting in reference amount calculation and average price return to ensure robust handling without breaking category pages or variable product rendering.
+
 ## 2.5.5 — 2026-01-01
 - Tweak — Visual standardization: inputs/selects at 34px; textareas min 46px
 - Fix   — Select2 multiple alignment and height consistency (inline search/choice chips)

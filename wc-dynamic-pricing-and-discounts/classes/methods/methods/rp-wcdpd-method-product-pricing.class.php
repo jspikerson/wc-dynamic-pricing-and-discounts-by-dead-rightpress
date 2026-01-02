@@ -133,7 +133,7 @@ abstract class RP_WCDPD_Method_Product_Pricing extends RP_WCDPD_Method
             $adjusted_amount = RightPress_Product_Price_Breakdown::get_price_from_prices_array($prices, $base_amount, $product, $cart_item, true);
 
             // Calculate reference amount
-            return (float) ($base_amount - $adjusted_amount);
+            return (float) ((float) $base_amount - (float) $adjusted_amount);
         }
         // Reference amount is not needed
         else {
@@ -157,7 +157,7 @@ abstract class RP_WCDPD_Method_Product_Pricing extends RP_WCDPD_Method
 
         // Use intermediate reference price if available
         if ($intermediate_reference_price !== null) {
-            return $intermediate_reference_price;
+            return (float) $intermediate_reference_price;
         }
         // Get base price from product
         else {

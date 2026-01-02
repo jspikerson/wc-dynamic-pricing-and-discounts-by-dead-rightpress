@@ -117,7 +117,7 @@ final class RightPress_Product_Price_Breakdown
         $rounded_average_price = apply_filters('rightpress_product_price_breakdown_average_price', $rounded_average_price, $prices['ranges'], $product, $cart_item);
 
         // Return price
-        return $rounded_average_price;
+        return (float) $rounded_average_price;
     }
 
     /**
